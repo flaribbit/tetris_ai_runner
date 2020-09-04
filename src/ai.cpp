@@ -27,7 +27,7 @@ m_tetris::TetrisEngine<rule_st::TetrisRule, ai_zzz::Dig, search_path::Search> te
 
 extern "C" void attach_init()
 {
-    ege::mtsrand(unsigned int(time(nullptr)));
+    ege::mtsrand((unsigned int)(time(nullptr)));
 }
 
 //返回AI名字，会显示在界面上
