@@ -12,9 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: env test
-      run: gcc
+      run: mingw32-make
     - name: Artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: aa
-        path: aa
+        name: win64
+        path: ai.dll
