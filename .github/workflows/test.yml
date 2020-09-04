@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: env test
-      run: mingw32-make
+      run: mingw32-make CC=gcc
     - name: Artifact
       uses: actions/upload-artifact@v1.0.0
       with:
