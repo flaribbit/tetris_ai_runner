@@ -9,7 +9,7 @@ main: $(OBJS)
 	$(CC) $(OBJS) -shared -o ai.dll
 
 src\dllmain.o: src\dllmain.c
-	$(CC) $(CFLAGS) -c src\dllmain.c -o src\dllmain.o
+	gcc -s -O2 -DNDEBUG -Isrc -c src\dllmain.c -o src\dllmain.o
 src\integer_utils.o: src\integer_utils.cpp
 	$(CC) $(CFLAGS) -c src\integer_utils.cpp -o src\integer_utils.o
 src\rule_asrs.o: src\rule_asrs.cpp
