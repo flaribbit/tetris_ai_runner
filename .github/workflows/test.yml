@@ -11,10 +11,22 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    - name: env test
+    - name: build
       run: mingw32-make CC=gcc
     - name: Artifact
       uses: actions/upload-artifact@v1.0.0
       with:
         name: win64
         path: ai.dll
+
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: build
+      run: make so CC=gcc
+    - name: Artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: linux64
+        path: libai.so
