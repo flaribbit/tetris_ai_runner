@@ -52,3 +52,4 @@ Icon
 *.TMP
 *.ilk
 *.o
+*.dll
