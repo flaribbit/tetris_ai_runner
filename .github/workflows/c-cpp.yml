@@ -1,0 +1,15 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ envtest ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: test
+      run: gcc -v
